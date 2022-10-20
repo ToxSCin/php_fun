@@ -17,4 +17,9 @@ abstract class Controller
             exit("Arquivo não encontrado. Procurando: " . $view . ".php");
         }
     }
+    protected static function isAuthenticated()
+    {
+        if(!isset($_SESSION['usuario_logado']))
+            header("location: /login");
+    } 
 }

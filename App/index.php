@@ -5,6 +5,8 @@ include 'Controller/ProdutoController.php';
 include 'Controller/FuncionarioController.php';
 include 'Controller/Categoria_produtoController.php';
 include 'Controller/MenuController.php';
+include 'Controller/LoginController.php';
+use App\Controller\LoginController;
 
 
 
@@ -80,7 +82,25 @@ switch($url)
         Categoria_produtoController::delete();
     break;
 
+
+    case '/login':
+        LoginController::index();
+    break;
+    
+    case '/login/auth':
+        LoginController::auth();
+    break;
+    
+    case '/logout':
+        LoginController::logout();
+    break;
+    
+    
+    
       
+
+  
+    
 
 
 
